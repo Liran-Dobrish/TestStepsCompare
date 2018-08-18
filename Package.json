@@ -8,7 +8,10 @@
     "grunt-exec": "3.0.0",
     "grunt-karma": "^2.0.0",
     "grunt-ts": "^6.0.0-beta.21",
+    "hawk": "^7.0.7",
+    "hoek": "^5.0.4",
     "karma": "^3.0.0",
+    "lodash": "^4.17.10",
     "rimraf": "^2.5.4",
     "tfx-cli": "^0.5.14",
     "typescript": "^2.7.0"
