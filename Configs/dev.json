@@ -1,0 +1,6 @@
+{
+    "id": "teststepcompare-witextension-dev",
+    "name": "WorkItemExtension for Test Step Compare (dev)",
+    "public": false,
+    "version": "0.1.0"
+}

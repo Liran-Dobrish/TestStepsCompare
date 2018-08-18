@@ -1,0 +1,98 @@
+{
+    "manifestVersion": 1,
+    "id": "teststepcompare-witextension",
+    "version": "0.1.0",
+    "name": "WorkItemExtension for Test Step Compare ",
+    "publisher": "lirandobrish",
+    "description": "testcase steps version compare",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "scopes": [
+        "vso.work"
+    ],
+    "categories": [
+        "Plan and track"
+    ],
+    "branding": {
+        "color": "rgb(34, 34, 34)",
+        "theme": "blue"
+    },
+    "content": {},
+    "links": {},
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/Liran-Dobrish/TestStepsCompare.git"
+    },
+    "contributions": [
+        {
+            "id": "TCStepsVersionCompare-work-item-form-control",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "description": "Test Case Steps Version Custom work item form control",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Test Case steps version compare",
+                "uri": "index.html",
+                "height": 90
+            },
+            "inputs": [
+                {
+                    "id": "FieldName",
+                    "description": "The field associated with the control.",
+                    "type": "WorkItemField",
+                    "properties": {
+                        "workItemFieldTypes": [
+                            "String"
+                        ]
+                    },
+                    "validation": {
+                        "dataType": "String",
+                        "isRequired": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "compare-form",
+            "type": "ms.vss-web.control",
+            "description": "Compare dialog",
+            "targets": [],
+            "properties": {
+                "uri": "compare-form.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "images",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "styles",
+            "addressable": true
+        },
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "compare-form.html",
+            "addressable": true
+        }
+    ]
+}

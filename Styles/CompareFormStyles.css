@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 100%;    
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    color: black;
+}
+
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+th {
+    background-color: lightskyblue;
+    color: black;
+    font-weight: bold;
+}
+
+.diffStep
+{
+    background-color: #F04747 !important;
+}
+
+.newStep
+{
+    background-color: lightgreen !important;
+}

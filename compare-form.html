@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="dist/VSS.SDK.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script> -->
+    <link rel="stylesheet" href="styles/CompareFormStyles.css" type="text/css" />
+    <!-- <script src="scripts/CompareDialog.js"></script> -->
+</head>
+
+<body style="overflow: scroll;">
+    <table id="compareTable">
+        <thead>
+            <tr>
+                <th rowspan="3">No.</th>
+                <th id="thV1Rev" colspan="2">Version 1 - {revision1.text}</th>                
+                <th id="thV2Rev" colspan="2">Version 2 - {revision2.text}</th>                
+            </tr>
+            <tr>                
+                <th id="thV1Title" colspan="2" >{revision1.WorkItemTitle}</th>                
+                <th id="thV2Title" colspan="2">{revision2.WorkItemTitle}</th>                
+            </tr>
+            <tr>                
+                <th>Action</th>                
+                <th>Expected Result</th>                
+                <th>Action</th>                
+                <th>Expected Result</th>                
+            </tr>
+        </thead>
+        <tbody id="compareTableBody">
+            <!-- <tr class="newStep">
+                <td id="td1">{i}</td>
+                <td>{revision1.step[i].Action}</td>
+                <td>{revision1.step[i].Expected}</td>
+                <td>{revision2.step[i].Action}</td>
+                <td>{revision1.step[i].Expected}</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true
+        });
+
+        // Load main entry point for extension 
+        VSS.require(["scripts/CompareDialog"], function () {
+            // loading succeeded
+            VSS.notifyLoadSucceeded();
+        });
+    </script>
+</body>
+
+</html>
