@@ -40,24 +40,8 @@
             "properties": {
                 "name": "Test Case steps version compare",
                 "uri": "index.html",
-                "height": 90
-            },
-            "inputs": [
-                {
-                    "id": "FieldName",
-                    "description": "The field associated with the control.",
-                    "type": "WorkItemField",
-                    "properties": {
-                        "workItemFieldTypes": [
-                            "String"
-                        ]
-                    },
-                    "validation": {
-                        "dataType": "String",
-                        "isRequired": true
-                    }
-                }
-            ]
+                "height": 50              
+            }
         },
         {
             "id": "compare-form",
