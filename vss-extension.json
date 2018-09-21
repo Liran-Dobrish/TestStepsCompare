@@ -19,15 +19,37 @@
     "categories": [
         "Plan and track"
     ],
-    "branding": {
-        "color": "rgb(34, 34, 34)",
-        "theme": "blue"
+    "content": {
+        "details": {
+            "path": "readme.md"
+        }
     },
-    "content": {},
-    "links": {},
+    "links": {
+        "home": {
+            "uri": "https://github.com/Liran-Dobrish/TestStepsCompare"
+        },
+        "learn": {
+            "uri": "https://github.com/Liran-Dobrish/TestStepsCompare"
+        },
+        "repository": {
+            "uri": "https://github.com/Liran-Dobrish/TestStepsCompare"
+        },
+        "issues": {
+            "uri": "https://github.com/Liran-Dobrish/TestStepsCompare/issues"
+        },
+        "support": {
+            "uri": "https://github.com/Liran-Dobrish/TestStepsCompare/issues"
+        }
+    },    
+    "tags": [
+        "Work Items",
+        "Extensions",
+        "Work Item Control",
+        "Test Steps Compare"
+    ],
     "repository": {
         "type": "git",
-        "uri": "https://github.com/Liran-Dobrish/TestStepsCompare.git"
+        "uri": "https://github.com/Liran-Dobrish/TestStepsCompare"
     },
     "contributions": [
         {
@@ -40,24 +62,8 @@
             "properties": {
                 "name": "Test Case steps version compare",
                 "uri": "index.html",
-                "height": 90
-            },
-            "inputs": [
-                {
-                    "id": "FieldName",
-                    "description": "The field associated with the control.",
-                    "type": "WorkItemField",
-                    "properties": {
-                        "workItemFieldTypes": [
-                            "String"
-                        ]
-                    },
-                    "validation": {
-                        "dataType": "String",
-                        "isRequired": true
-                    }
-                }
-            ]
+                "height": 50              
+            }
         },
         {
             "id": "compare-form",

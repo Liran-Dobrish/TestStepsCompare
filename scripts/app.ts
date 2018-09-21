@@ -8,21 +8,19 @@ $(window).bind("keydown", function (event: JQueryEventObject) {
         if (String.fromCharCode(event.which) === "S") {
             event.preventDefault();
             WorkItemFormService.getService().then((service) => service.beginSaveWorkItem($.noop, $.noop));
-            control.invalidate();
         }
     }
 });
 
 var control: TCStepsVersionControlController;
 
-var provider= () => {
+var provider = () => {
     var ensureControl = () => {
         if (!control) {
             control = new TCStepsVersionControlController();
-            control.initialize();
         }
 
-        control.invalidate();
+        control.refresh();
     }
 
     return {
@@ -34,14 +32,14 @@ var provider= () => {
             if (control) {
                 control.clear();
             }
+        },
+        onFieldChanged: (args: ExtensionContracts.IWorkItemFieldChangedArgs) => {
+            if (control && args.changedFields["Microsoft.VSTS.TCM.Steps"] !== undefined &&
+                args.changedFields["Microsoft.VSTS.TCM.Steps"] !== null) {
+                    control.clear();
+                    control.refresh();
+            }
         }
-        // onFieldChanged: (fieldChangedArgs: ExtensionContracts.IWorkItemFieldChangedArgs) => {
-        //     // when ever a field is changed update the control
-        //     var changedValue = fieldChangedArgs.changedFields[control.getFieldName()];
-        //     if (changedValue !== undefined) {
-        //         control.updateExternal(changedValue);
-        //     }
-        // }
     }
 }
 

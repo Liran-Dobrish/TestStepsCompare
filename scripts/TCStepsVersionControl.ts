@@ -63,10 +63,7 @@ export class TCStepsVersionControlController {
     }
 
     public clear(): void {
-    }
-
-    public initialize(): void {
-        this.invalidate();
+        this._model = [];
     }
 
     private _createRevision(wi: WitContracts.WorkItem): Models.TCStepsRevisions {
@@ -94,7 +91,12 @@ export class TCStepsVersionControlController {
     /**
     * Invalidate the control's value
     */
-    public invalidate(): void {
+    public refresh(): void {
+        if (this._model.length > 0) {
+            console.log("already have data");
+            return;
+        }
+
         console.log("Entered invalidate");
         WitService.WorkItemFormService.getService().then(
             (witService: WitService.IWorkItemFormService) => {
