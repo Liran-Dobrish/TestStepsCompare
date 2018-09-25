@@ -5,4 +5,4 @@ dist
 typings
 *.js
 .baseDir.ts
-lirandobrish.teststepcompare-witextension-dev-0.1.0.vsix
+*.vsix
