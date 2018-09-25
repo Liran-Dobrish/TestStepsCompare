@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "teststepcompare-witextension",
     "version": "0.1.0",
-    "name": "WorkItemExtension for Test Step Compare ",
+    "name": "Test Step Compare ",
     "publisher": "lirandobrish",
     "description": "testcase steps version compare",
     "targets": [
